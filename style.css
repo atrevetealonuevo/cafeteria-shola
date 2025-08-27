@@ -1,0 +1,191 @@
+/* Custom Styles for Café Aroma */
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&h=1080&fit=crop') center/cover;
+    background-attachment: fixed;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-float i {
+    margin-top: 16px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Hover Effects */
+.hover-lift:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu.show {
+    display: block;
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Button Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-pulse:hover {
+    animation: pulse 0.6s infinite;
+}
+
+/* Loading Animation for Forms */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+    
+    .whatsapp-float i {
+        margin-top: 13px;
+    }
+    
+    .hero-bg {
+        background-attachment: scroll;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d97706;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b45309;
+}
+
+/* Form Focus States */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #d97706 !important;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+/* Success Message Styles */
+.success-message {
+    background-color: #10b981;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.error-message {
+    background-color: #ef4444;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    display: none;
+}
