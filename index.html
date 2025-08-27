@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aroma - El mejor café de la ciudad</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-amber-900 text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <i class="fas fa-coffee mr-2"></i>Café Aroma
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#inicio" class="hover:text-amber-300 transition">Inicio</a>
+                <a href="#menu" class="hover:text-amber-300 transition">Menú</a>
+                <a href="#nosotros" class="hover:text-amber-300 transition">Nosotros</a>
+                <a href="#contacto" class="hover:text-amber-300 transition">Contacto</a>
+            </div>
+            <button class="md:hidden" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-amber-800 px-4 py-2 hidden" id="mobile-menu">
+            <a href="#inicio" class="block py-2 hover:text-amber-300">Inicio</a>
+            <a href="#menu" class="block py-2 hover:text-amber-300">Menú</a>
+            <a href="#nosotros" class="block py-2 hover:text-amber-300">Nosotros</a>
+            <a href="#contacto" class="block py-2 hover:text-amber-300">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                El Mejor Café de la Ciudad
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Despierta tus sentidos con nuestros granos seleccionados y ambiente acogedor
+            </p>
+            <div class="space-x-4">
+                <a href="#menu" class="bg-amber-600 hover:bg-amber-700 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105">
+                    Ver Menú
+                </a>
+                <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20Café%20Aroma" 
+                   class="border-2 border-white hover:bg-white hover:text-amber-900 px-8 py-4 rounded-full text-lg font-semibold transition">
+                    <i class="fab fa-whatsapp mr-2"></i>Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-amber-900 mb-4">Nuestro Menú</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Descubre nuestra selección de cafés premium, postres artesanales y snacks deliciosos
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Café -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop" 
+                         alt="Café Espresso" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Espresso Premium</h3>
+                        <p class="text-gray-600 mb-4">Café intenso con notas de chocolate y caramelo</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$2.500</span>
+                            <button class="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700 transition">
+                                Ordenar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latte -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=400&h=300&fit=crop" 
+                         alt="Latte Art" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Latte Art</h3>
+                        <p class="text-gray-600 mb-4">Café suave con leche vaporizada y arte latte</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.200</span>
+                            <button class="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700 transition">
+                                Ordenar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postres -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" 
+                         alt="Pastel de Chocolate" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Pastel de Chocolate</h3>
+                        <p class="text-gray-600 mb-4">Delicioso pastel artesanal con chocolate belga</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$4.500</span>
+                            <button class="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700 transition">
+                                Ordenar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-amber-900 mb-6">Nuestra Historia</h2>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        Desde 2015, Café Aroma ha sido el punto de encuentro favorito de los amantes del café. 
+                        Seleccionamos cuidadosamente nuestros granos de las mejores fincas de América Latina.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Nuestro compromiso es ofrecer una experiencia única, combinando tradición, calidad 
+                        y un ambiente acogedor que te haga sentir como en casa.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-amber-600">8+</div>
+                            <div class="text-gray-600">Años de experiencia</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-amber-600">15k+</div>
+                            <div class="text-gray-600">Clientes felices</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-amber-600">25+</div>
+                            <div class="text-gray-600">Variedades de café</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&h=400&fit=crop" 
+                         alt="Interior de la cafetería" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-amber-900 mb-4">Lo que dicen nuestros clientes</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"El mejor café que he probado en la ciudad. El ambiente es perfecto para trabajar o relajarse."</p>
+                    <div class="font-semibold text-amber-900">- María González</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Excelente atención y los postres son increíbles. Mi lugar favorito para reuniones."</p>
+                    <div class="font-semibold text-amber-900">- Carlos Rodríguez</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"La calidad del café es excepcional y el servicio siempre es amable y rápido."</p>
+                    <div class="font-semibold text-amber-900">- Ana Martínez</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Contáctanos</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    ¿Tienes alguna pregunta o quieres hacer una reserva? Estamos aquí para ayudarte
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-amber-500 mr-4 text-xl"></i>
+                            <div>
+                                <div class="font-semibold">Dirección</div>
+                                <div class="text-gray-300">Av. Providencia 1234, Santiago</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-amber-500 mr-4 text-xl"></i>
+                            <div>
+                                <div class="font-semibold">Teléfono</div>
+                                <div class="text-gray-300">+56 9 1234 5678</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-amber-500 mr-4 text-xl"></i>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <div class="text-gray-300">hola@cafearoma.cl</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-amber-500 mr-4 text-xl"></i>
+                            <div>
+                                <div class="font-semibold">Horarios</div>
+                                <div class="text-gray-300">Lun - Dom: 7:00 - 22:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Envíanos un Mensaje</h3>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                        <div>
+                            <input type="text" name="name" placeholder="Tu nombre" required
+                                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-amber-500 text-white">
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Tu email" required
+                                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-amber-500 text-white">
+                        </div>
+                        <div>
+                            <input type="tel" name="phone" placeholder="Tu teléfono"
+                                   class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-amber-500 text-white">
+                        </div>
+                        <div>
+                            <textarea name="message" rows="4" placeholder="Tu mensaje" required
+                                      class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-amber-500 text-white resize-none"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-amber-600 hover:bg-amber-700 px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fas fa-coffee mr-2"></i>Café Aroma
+                    </div>
+                    <p class="text-amber-200">
+                        El mejor café de la ciudad, donde cada taza cuenta una historia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-amber-200 hover:text-white transition">Inicio</a></li>
+                        <li><a href="#menu" class="text-amber-200 hover:text-white transition">Menú</a></li>
+                        <li><a href="#nosotros" class="text-amber-200 hover:text-white transition">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-amber-200 hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Horarios</h4>
+                    <ul class="space-y-2 text-amber-200">
+                        <li>Lunes - Viernes: 7:00 - 22:00</li>
+                        <li>Sábado - Domingo: 8:00 - 22:00</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-200 hover:text-white text-2xl transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-white text-2xl transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-white text-2xl transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center text-amber-200">
+                <p>&copy; 2024 Café Aroma. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20Café%20Aroma" 
+       class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
